@@ -6,15 +6,21 @@ while True:
     except:
         print("Invalid number!")
 
-price = input("Enter price (dollars, numerator, denominator): ")
 
-num = price.split()
+while True:
+    price = input("Enter price (dollars, numerator, denominator): ")
+    try:
+        num = price.split()
 
-num1 = int(num[0])
-num2 = int(num[1])
-num3 = int(num[2])
+        num1 = int(num[0])
+        num2 = int(num[1])
+        num3 = int(num[2])
+        value = num1 + (num2/num3)
+        break
+    except:
+        print("Invalid price!")
 
-value = num1 + (num2/num3)
+
 
 
 print(shares, "shares with market price",num1, num2, num3, "have value", "$", value )
