@@ -1,6 +1,12 @@
-shares = input("Enter number of shares: ")
+while True:
+    shares = input("Enter number of shares: ")
+    try:
+        shares = int(shares)
+        break
+    except:
+        print("Invalid number!")
 
-price = input("Enter price (dollar, numerator,denominator): ")
+price = input("Enter price (dollars, numerator, denominator): ")
 
 num = price.split()
 
